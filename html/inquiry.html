@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry form</title>
+  <link rel="stylesheet" href="../Css/query_form.css">
+  
+   <!-- <style>
+     .join{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+} 
+/* .join_cont{
+    background-color: wheat;
+    width: 120px;
+    height: 120px;
+    border: none;
+    font-size: 20px;
+} */
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(210, 212, 212); */
+ }
+ h1{
+     text-align: center;
+     font-style: normal;
+     font-weight: 150;
+ }
+ .container{
+     /* background-color: rgba(128, 123, 123, 0.39); */
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     width: 100%;   
+ }
+ .container2{
+     font-family: sans-serif;
+     font-size: 20px;
+ }
+ .container3{
+     /* border:3px dotted black;
+     border-radius: 10px;
+     padding: 20px;
+     background-color:rgb(198, 202, 205); */
+     
+     height: 63vh;
+     width: 63vh;
+     display: flex;
+     justify-content: center;
+ }
+ /* .container3:hover{
+     background-color: rgba(128, 128, 128, 0.158);
+     color: rgb(99, 99, 113);
+ } */
+ .input,.label{
+     margin: 10px;
+     width: 90%;
+     font-size: 20px;
+     color: white;
+ }
+ .input{
+     border: 1px solid rgb(255, 255, 255);
+     border-radius: 10px;
+     height: 35px;
+     font-size: 15px;
+     background-color: white;
+     color: grey;
+ 
+ }
+ .input:hover{
+     background-color: rgba(128, 128, 128, 0.158);
+    color: white;
+ }
+
+ .button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  border: white solid 0.15em;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  height: 30px;
+  width: 110px;
+}
+
+.button input {
+  z-index: 1;
+  /* color: grey; */
+  font-size: 30px;
+  font-weight: 400;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.407);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+  table{
+    width: 100%;
+    height: 100%;
+  }
+  td{
+    margin: 20px;
+    color: white;
+
+  }
+  .span{
+    width: 95%;
+  }
+  .select{
+    width: 43%;
+    color: gray;
+  }
+  .center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.705);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 12px; */
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    margin: auto;
+    width: 101%;
+    height: 101%;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  
+  .card p:not(.heading) {
+    font-size: 14px;
+  }
+  
+  .card p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+  }
+  
+  .card:hover::after {
+    filter: blur(30px);
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) ;
+  }
+  
+  
+   </style> -->
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container2">
+      <h1>Travel Inquiry</h1>
+     
+       
+      
+     
+      <div class="container3">
+        <div class="card">
+ 
+ 
+       
+        <form class="form" method="post" onsubmit="return validationForm()" name="form" action="inquiry.php">
+          <table class="responsive-table">
+            <tr>
+              <td><input type="text" name="name" id="name" class="input" placeholder="Enter you Name"></td>
+              <td> <input type="number" name="age" class="input" placeholder="Enter your Age"> </td>
+            </tr>
+            <tr>
+              <td> <input type="email" name="email" class="input" placeholder="Enter your Email" > </td>
+              <td> <input type="number" name="phone" class="input" placeholder="Enter your Phone Number"> </td>
+            </tr>
+            <tr>
+              <td colspan="2"> <input type="text" name="address" class="input span" placeholder="Enter your Address"> </td>
+            </tr>
+
+            <tr>
+              <td> <input type="text" name="country" class="input" id="" placeholder="Enter your Country">
+                 <!-- <select type="text" name="country" class="input">
+                <option value="">Select Your Country</option>
+
+                <option value="Egypt">Egypt</option>
+                <option value="India">India</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Germany">Germany</option>
+              </select> --></td> 
+              <td> <input type="text" name="city" class="input" placeholder="Enter your City"> </td>
+            </tr>
+            <tr>
+              <td colspan="2"> <input type="text" name="destination" class="input span"
+                  placeholder="Enter your Destination of interest"> </td>
+            </tr>
+            </tr>
+            <tr>
+              <td> <input type="number" name="budget" class="input" placeholder="Enter your Vacation Budget"> </td>
+              <td> <input type="number" name="travellers" class="input" placeholder="Enter Number of Travellers">
+              </td>
+            </tr>
+          
+            <tr>
+              <td><label for="date" class="label">Date of Travel: </label></td>
+              <td><input type="date" name="sdate" class="input"></td>
+              
+            </tr>
+            <tr>
+              <td> <label for="date" class="label">End Date of Travel: </label> </td>
+              <td><input type="date" name=" edate" class="input" ></td>
+            </tr>
+            <tr> <td colspan="2"><label for="kind" class=" center">What kind of traveller are you?</label>
+            </td>
+            
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="center">
+                <input type="text" name="kind" class="input" id="lind">
+                <!-- <select name="kind" id="traveller" class="input select ">
+                  <option value="">Select any one</option>
+
+                  <option value="Adventures">Adventures</option>
+                  <option value="Peaceful">Peaceful</option>
+
+                  <option value="Influencer">Influencer</option>
+                </select> -->
+              </div>
+           </td>
+          </tr>
+          
+            <tr class="button_main">
+              <td><div class="join">
+                <button class="button">
+                  <input type="submit" value="Submit" class="join_cont" >
+                </button></div></td>
+                <td><div class="join">
+                  <button class="button">
+                  <input type="reset" value="Reset" class="join_cont">
+                  </button></div></td>
+            </tr>
+
+
+
+
+
+
+
+      
+          </table>
+        </div>
+      </div>
+    </div>
+      
+        </div>
+
+<script>
+
+  function validationForm(){
+
+    let name = document.forms.form.name.value;
+    let age=document.forms["form"]["age"].value;
+    let email=document.forms["form"]["email"].value;
+    let phone=document.forms["form"]["phone"].value;
+    let address=document.forms["form"]["address"].value;
+    let city=document.forms["form"]["city"].value;
+    let state=document.forms["form"]["state"].value;
+    let destination=document.forms["form"]["destination"].value;
+    let budget=document.forms["form"]["budget"].value;
+    let travellersnumber=document.forms["form"]["travellers_number"].value;
+    let date=document.forms["form"]["date"].value;
+    let enddate=document.forms["form"]["end_date"].value;
+     let input = document.getElementById("name").value;
+    if(name){
+      alert("Name is required!");
+      name.focus();
+     return false;}
+ return true;
+
+
+
+  }
+
+
+
+</script>
+
+</body>
+
+</html>

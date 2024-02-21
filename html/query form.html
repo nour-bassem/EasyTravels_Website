@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry form</title>
+  <link rel="stylesheet" href="E:/MIU STUDIES/EasyTravels web html/query_form.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container2">
+      <h1>Travel Inquiry</h1>
+     
+       
+      
+     
+      <div class="container3">
+        <div class="card">
+ 
+ 
+       
+        <form method="post" onsubmit="return validationForm()" name="form" >
+          <table>
+            <tr>
+              <td><input type="text" name="name" id="name" class="input" placeholder="Enter you Name"></td>
+              <td> <input type="number" name="age" class="input" placeholder="Enter your Age"> </td>
+            </tr>
+            <tr>
+              <td> <input type="email" name="email" class="input" placeholder="Enter your Email" > </td>
+              <td> <input type="number" name="phone" class="input" placeholder="Enter your Phone Number"> </td>
+            </tr>
+            <tr>
+              <td colspan="2"> <input type="text" name="address" class="input span" placeholder="Enter your Address"> </td>
+            </tr>
+
+            <tr>
+              <td> <input type="text" name="city" class="input" placeholder="Enter your City"> </td>
+              <td> <input type="text" name="state" class="input" placeholder="Enter your State"> </td>
+            </tr>
+            <tr>
+              <td colspan="2"> <input type="text" name="destination" class="input span"
+                  placeholder="Enter your Destination of interest"> </td>
+            </tr>
+            </tr>
+            <tr>
+              <td> <input type="number" name="budget" class="input" placeholder="Enter your Vacation Budget"> </td>
+              <td> <input type="number" name="travellers_number" class="input" placeholder="Enter Number of Travellers">
+              </td>
+            </tr>
+          
+            <tr>
+              <td><label for="date" class="label">Date of Travel: </label></td>
+              <td> <label for="date" class="label">End Date of Travel: </label> </td>
+            </tr>
+            <tr>
+              <td><input type="date" name="date" class="input"></td>
+              <td><input type="date" name=" end_date" class="input" ></td>
+            </tr>
+            <tr> <td colspan="2"><label for="traveller" class=" center">What kind of traveller are you?</label>
+            </td>
+            
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="center">
+                <select name="traveller" id="traveller" class="input select ">
+                  <option value="">Select any one</option>
+
+                  <option value="">Adventures</option>
+                  <option value="">Peaceful</option>
+
+                  <option value="">Influencer</option>
+                </select>
+              </div>
+           </td>
+          </tr>
+          
+            <tr class="button_main">
+              <td><div class="join">
+                <button class="button">
+                  <input type="submit" value="Submit" class="join_cont" >
+                </button></div></td>
+                <td><div class="join">
+                  <button class="button">
+                  <input type="reset" value="Reset" class="join_cont">
+                  </button></div></td>
+            </tr>
+
+
+
+
+
+
+
+      
+          </table>
+        </div>
+      </div>
+    </div>
+      
+        </div>
+
+<script>
+
+  function validationForm(){
+
+    let name = document.forms.form.name.value;
+    let age=document.forms["form"]["age"].value;
+    let email=document.forms["form"]["email"].value;
+    let phone=document.forms["form"]["phone"].value;
+    let address=document.forms["form"]["address"].value;
+    let city=document.forms["form"]["city"].value;
+    let state=document.forms["form"]["state"].value;
+    let destination=document.forms["form"]["destination"].value;
+    let budget=document.forms["form"]["budget"].value;
+    let travellersnumber=document.forms["form"]["travellers_number"].value;
+    let date=document.forms["form"]["date"].value;
+    let enddate=document.forms["form"]["end_date"].value;
+     let input = document.getElementById("name").value;
+    if(name){
+      alert("Name is required!");
+      name.focus();
+     return false;}
+ return true;
+
+
+
+  }
+
+
+
+</script>
+
+</body>
+
+</html>

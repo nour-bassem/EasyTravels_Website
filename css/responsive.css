@@ -1,0 +1,72 @@
+
+/* Tablet Styles (601px to 1024px) */
+@media (min-width: 701px) and (max-width: 1024px) {
+    /* Adjust styles for tablets */
+    /* places section   section: 2 */
+    .place_names{
+        flex-direction: column;
+        
+    }
+    .responsivecard_one{
+        margin-bottom: 23px;
+    }
+    .responsivecard_sec{
+        margin-top: 23px;
+    }
+
+    /* footer */
+    .footer_quote{
+        margin:0px 60px;
+    }
+    .footer_detail{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .recent_trips{
+        padding-top: 40px;
+        width: 80%;
+    }
+  }
+
+
+  /* Mobile Styles (up to 600px) */
+@media (max-width: 700px) {
+    /* Adjust styles for mobile devices */
+    /* home */
+    .home_img svg{
+        height: 300px;
+        width: 300px;
+    }
+    /* places section   section: 2 */
+    .place_names{
+        flex-direction: column;
+        
+    }
+    .responsivecard_one{
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .responsivecard_sec{
+        flex-direction: column;
+
+        margin-top: 0px;
+    }
+    .egypt,.india,.germany,.dubai{
+        margin: 10px;
+    }
+
+    /* footer */
+    
+    .recent_trips{
+        padding-top: 40px;
+        width: 80%;
+    }
+    .footer_detail{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .footer_quote{
+        margin:0px 60px;
+    }
+  }
+  

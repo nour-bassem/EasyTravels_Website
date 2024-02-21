@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:wght@500&display=swap');
+.footer{
+    grid-column-start:1 ;
+    grid-column-end:7 ;
+    /* grid-row-start: 4; */
+    /* grid-row-end: 6; */
+    height: 10%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.main_footer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_detail{
+    height: 80%;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    /* border: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.389);
+    
+}
+.contact_us{
+    height: 100%;
+    width: 40%;
+    /* background-color: rgba(255, 255, 255, 0.389); */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.trip_detail{
+    width: 100%;
+}
+
+.photo_footer img{
+    height: 150px;
+    width: 150px;
+}
+.recent_trips{
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.389); */
+    color: white;
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+
+.hotline,.email{
+    display: flex;
+    /* align-items: center; */
+    justify-content:baseline;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.hotline p,.email p{
+    margin-left: 20px;
+}
+
+.photo_f{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+.title_footer{
+    text-align: center;
+}
+.socialmedia{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: space-evenly; */
+    
+}
+.insta,.face,.twitter,.youtube{
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    /* padding: 10px; */
+    margin: 0px 5px ;
+    background-color: rgb(254, 254, 254);
+    margin-top: 20px;  
+}
+.insta img,.face img,.twitter img,.youtube img{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.389);
+    border-radius: 50px;
+   
+}
+.twitter img{
+    border-radius: 50px;
+}
+.photo_footer{
+    height: 100%;
+    width: 100%;
+}
+.photo_footer img{
+    margin: 5px;
+}
+.footer_quote{
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid white;
+    border-radius: 10px;
+    /* padding: 10px; */
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.389);
+    /* margin: 10px; */
+  }
